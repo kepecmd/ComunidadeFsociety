@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fsociety - Comunidade Hacker</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Lato', sans-serif;
+      overflow-x: hidden;
+      background-image: url('https://i.imgur.com/2ClEVTS.jpeg'); /* Substitua por sua imagem */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.88); /* Mais escuro para destacar o vermelho */
+      z-index: -1;
+    }
+
+    .hero {
+      max-width: 800px;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      font-weight: 100;
+      letter-spacing: 2px;
+      text-shadow: 0 0 8px #ff0000, 0 0 16px #800000;
+      color: #fff;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideIn 1.2s forwards 0.3s;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+      color: #ddd;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideIn 1s forwards 0.8s;
+    }
+
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Botão com tema vermelho */
+    .button-container-1 {
+      position: relative;
+      width: 240px;
+      height: 60px;
+      margin: 2.5rem auto;
+      overflow: hidden;
+      border: 2px solid #ff0000;
+      font-family: "Lato", sans-serif;
+      font-weight: 300;
+      font-size: 20px;
+      transition: 0.5s;
+      letter-spacing: 1.5px;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+    }
+
+    .button-container-1 button {
+      width: 101%;
+      height: 100%;
+      font-family: "Lato", sans-serif;
+      font-weight: bold;
+      font-size: 14px;
+      letter-spacing: 2px;
+      background: #000;
+
+      -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+      mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+      -webkit-mask-size: 2300% 100%;
+      mask-size: 2300% 100%;
+
+      border: none;
+      color: #ff0000; /* Texto vermelho */
+      cursor: pointer;
+
+      -webkit-animation: ani2 0.7s steps(22) forwards;
+      animation: ani2 0.7s steps(22) forwards;
+    }
+
+    .button-container-1 button:hover {
+      -webkit-animation: ani 0.7s steps(22) forwards;
+      animation: ani 0.7s steps(22) forwards;
+    }
+
+    .mas {
+      position: absolute;
+      color: #000;
+      text-align: center;
+      width: 101%;
+      font-family: "Lato", sans-serif;
+      font-size: 14px;
+      margin-top: 19px;
+      font-weight: bold;
+    }
+
+    @-webkit-keyframes ani {
+      from { -webkit-mask-position: 0 0; mask-position: 0 0; }
+      to   { -webkit-mask-position: 100% 0; mask-position: 100% 0; }
+    }
+    @keyframes ani {
+      from { -webkit-mask-position: 0 0; mask-position: 0 0; }
+      to   { -webkit-mask-position: 100% 0; mask-position: 100% 0; }
+    }
+
+    @-webkit-keyframes ani2 {
+      from { -webkit-mask-position: 100% 0; mask-position: 100% 0; }
+      to   { -webkit-mask-position: 0 0; mask-position: 0 0; }
+    }
+    @keyframes ani2 {
+      from { -webkit-mask-position: 100% 0; mask-position: 100% 0; }
+      to   { -webkit-mask-position: 0 0; mask-position: 0 0; }
+    }
+
+    /* Responsividade */
+    @media (max-width: 600px) {
+      h1 { font-size: 2.2rem; }
+      p { font-size: 1rem; }
+      .button-container-1 {
+        width: 200px;
+        height: 55px;
+      }
+      .button-container-1 button,
+      .mas {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>WELCOME TO <span style="color:#ff0000; font-weight:300;">FSOCIETY</span></h1>
+    <p>
+      Uma comunidade secreta de hackers, pensadores, engenheiros sociais e coders.<br>
+      O sistema falhou. É hora de reescrever as regras. Junte-se à resistência digital.
+    </p>
+    <div class="button-container-1">
+      <button onclick="window.open('https://pay.cakto.com.br/3bn2gao_641232')">Torne-se um hacker</button>
+      <span class="mas">Entrar na Fsociety</span>
+    </div>
+  </div>
+</body>
+</html>
